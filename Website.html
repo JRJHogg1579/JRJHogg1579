@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+</head>
+
+<body onload="openProjectTab()">
+
+
+    <h1> JAMIE HOGG </h1>
+    <h3> BSC GAMES DEVELOPMENT, GLASGOW CALEDONIAN UNIVERSITY </h3>
+
+    <!-- Main website tabs -->
+    <div class="tab">
+        <button id="projectTabID" class="tablinks" onclick="openProjectTab()">PROJECTS</button>
+        <button id="aboutMeTabID" class="tablinks" onclick="openAboutMeTab()">ABOUT ME</button>
+        <button id="contactMeTabID" class="tablinks" onclick="openContactMeTab()">CONTACT ME</button>
+    </div>
+
+    <!-- Project tabs -->
+    <div id="Projects" class="tabcontent">
+
+        <h3>PROJECTS</h3>
+
+        <div class="subTab">
+            <button id="project1TabID" class="subTablinks" onclick="openSubTab(event, 'p1')">PROJECT BALL EXPLODER</button>
+            <button class="subTablinks" onclick="openSubTab(event, 'p2')">PROJECT ARTI</button>
+            <button class="subTablinks" onclick="openSubTab(event, 'p3')">PROJECT ISLAND</button>
+            <button class="subTablinks" onclick="openSubTab(event, 'p4')">VR RESCUE</button>
+            <button class="subTablinks" onclick="openSubTab(event, 'p5')">PROJECT FLANK</button>
+            <button class="subTablinks" onclick="openSubTab(event, 'p6')">CMD SPACE INVADERS/SNAKE</button>
+            <button class="subTablinks" onclick="openSubTab(event, 'p7')">PROJECT DRIFT</button>
+            <button class="subTablinks" onclick="openSubTab(event, 'p8')">MANDELBROT CPU PARALLELISATION</button>
+            <button class="subTablinks" onclick="openSubTab(event, 'p9')">PROJECT QUEST</button>
+        </div>
+
+    </div>
+
+    <!-- Project Island subtab -->
+    <div id="p1" class="subTabcontent">
+
+        <!-- Project title -->
+        <h3>PROJECT BALL EXPLODER</h3>
+
+        <!-- Project video -->
+        <video controls>
+            <source src="ballExploderVideo.mp4" type="video/mp4">
+        </video>
+
+        <p> C++ OpenGL project using a geometry shader to create an explosion effect as well as framebuffer operations to create an inverted colour reticle shader and depth testing for shadowmapping</p>
+
+    </div>
+
+    <!-- Project 2 subtab -->
+    <div id="p2" class="subTabcontent">
+
+
+        <!-- Project title -->
+        <h3>PROJECT ARTI</h3>
+
+        <!-- Project video -->
+        <video controls>
+            <source src="artiVideo.mp4" type="video/mp4">
+        </video>
+
+        <p> Unity multiplayer networking project where players compete in an rts-style game to destroy each other's base using soldiers and artillery </p>
+
+    </div>
+
+    <!-- Project 3 subtab -->
+    <div id="p3" class="subTabcontent">
+
+        <!-- Project title -->
+        <h3>PROJECT ISLAND</h3>
+
+        <!-- Project video -->
+        <video controls>
+            <source src="islandVideo.mp4" type="video/mp4">
+        </video>
+
+        <p> C++ OpenGL project using perlin noise to procedurally generate an island, the island was written to a .obj file for reuse. shader stuf shader stuff cringe </p>
+
+    </div>
+
+    <!-- Project 4 subtab -->
+    <div id="p4" class="subTabcontent">
+
+        <!-- Project title -->
+        <h3>VR RESCUE GROUP PROJECT</h3>
+
+        <!-- Project video -->
+        <video controls>
+            <source src="VRRescue.mp4" type="video/mp4">
+        </video>
+
+        <p> Unreal engine 5 vr project with the objective of training engineers about the rescue procedure after an incident in a wind turbine</p>
+
+    </div>
+
+    <!-- Project 5 subtab -->
+    <div id="p5" class="subTabcontent">
+
+        <!-- Project title -->
+        <h3>PROJECT FLANK</h3>
+
+        <!-- Project video -->
+        <p> video file too big </p>
+
+        <p> C++ console based space invaders and snake game </p>
+
+    </div>
+
+    <!-- Project 6 subtab -->
+    <div id="p6" class="subTabcontent">
+
+        <!-- Project title -->
+        <h3>SPACE INVADERS/SNAKE</h3>
+
+        <!-- Project video -->
+        <video controls>
+            <source src="spaceInvadersSnake.mp4" type="video/mp4">
+        </video>
+
+        <p> Unity based agent AI project using behaviour tree based decision making to create attack plans for rts-style agents </p>
+
+    </div>
+
+    <!-- Project 7 subtab -->
+    <div id="p7" class="subTabcontent">
+
+        <!-- Project title -->
+        <h3>PROJECT DRIFT</h3>
+
+        <!-- Project video -->
+        <p> project drift video </p>
+
+        <p> C++ OpenGL project designed for use on the PSVita. The player drifts the car around a track while avoiding obstacles and collecting checkpoints in order to achieve the best time </p>
+
+    </div>
+
+    <!-- Project 8 subtab -->
+    <div id="p8" class="subTabcontent">
+
+        <!-- Project title -->
+        <h3>MANDELBROT RENDERING WITH CPU PARALLELISATION</h3>
+
+        <!-- Project video -->
+        <p> video of mandelbrot </p>
+
+        <p> This project was a mandelbrot set being computed using a task farm to divide and parallelise across the cpu </p>
+
+    </div>
+
+    <!-- Project 9 subtab -->
+    <div id="p8" class="subTabcontent">
+
+        <!-- Project title -->
+        <h3>PROJECT QUEST</h3>
+
+        <!-- Project video -->
+        <p> video of pq </p>
+
+        <p> C++ SFML based rpg game where the player completes a quest to slay an ogre </p>
+
+    </div>
+
+
+
+
+
+    <!-- About me tab -->
+    <div id="About me" class="tabcontent">
+
+        <h3>About me</h3>
+
+        <p> fuck you </p>
+
+    </div>
+
+    <!-- About me tab -->
+    <div id="Contact me" class="tabcontent">
+
+        <h3>Contact me</h3>
+
+        <p> no fuck off </p>
+
+        <p> https://web3forms.com/templates/basic-html-contact-form</p>
+
+    </div>
+
+
+
+
+    <!-- Javascript -->
+    <script>
+
+        function clearTabs() {
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("subTabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("subTablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+        }
+
+
+        // Function for project tabs
+        function openSubTab(evt, tab) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("subTabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("subTablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tab).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+
+        // Function for opening the projects tab and the first project in the tab
+        function openProjectTab() {
+
+            clearTabs()
+
+            // Open the projects tab
+            document.getElementById("projectTabID").className += " active";
+            document.getElementById("Projects").style.display = "block";
+
+            // Open the project 1 tab
+            document.getElementById("project1TabID").className += " active";
+            document.getElementById("p1").style.display = "block";
+
+        }
+
+        // Function for opening the about me tab
+        function openAboutMeTab() {
+
+            clearTabs();
+
+            // Open the about me tab
+            document.getElementById("aboutMeTabID").className += " active";
+            document.getElementById("About me").style.display = "block";
+
+        }
+
+        function openContactMeTab() {
+
+            clearTabs();
+
+            // Open the contact me tab
+            document.getElementById("contactMeTabID").className += " active";
+            document.getElementById("Contact me").style.display = "block";
+        }
+    </script>
+
+
+</body>
+
+</html>
