@@ -29,6 +29,13 @@ h1
     font-size: 72px;
 }
 
+h2 {
+    text-align: center;
+    color: #ababab;
+    font-size: 36px;
+}
+
+
 h3 
 {
     text-align: left;
@@ -132,9 +139,156 @@ p
     transition: 0.3s;
 }
 
-video
-{
+
+/* contact me form stuff */
+.textField {
+    height: 36px;
+    width: 33.333%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    background-color: #ababab;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.messageTextField {
+    height: 36px;
+    width: 33.333%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    background-color: #ababab;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 12px;
+    padding-bottom: 72px;
+}
+
+
+.submitButton {
+    height: 36px;
+    width: 33.333%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    background-color: #ababab;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submitButton:hover {
+    background-color: #ddd;
+}
+
+.submitButton:focus {
+    background-color: #1ba7d1;
+}
+
+.mb-6 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+
+video {
     border: 2px solid #ccc;
     width: 50%;
     height: auto;
+}
+
+.contact-section {
+    width: 100%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 1rem;
+}
+
+.contact-intro > * + * {
+    margin-top: 1rem;
+}
+
+.contact-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+.contact-description {
+    color: rgb(107 114 128);
+}
+
+.form-group-container {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+    .form-input::placeholder,
+    .form-textarea:focus-visible {
+        color: #6b7280;
+    }
+
+    .form-input:focus-visible,
+    .form-textarea:focus-visible {
+        outline: 2px solid #2563eb;
+        outline-offset: 2px;
+    }
+
+.form-textarea {
+    min-height: 120px;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 1.2rem;
+    background-color: #3124ca;
+    color: #fff;
+    padding: 13px 5px;
+    border-radius: 0.375rem;
+}
+
+
+
+
+
+
+.invalid-feedback,
+.empty-feedback {
+    display: none;
+}
+
+.was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+}
+
+.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+}
+
+.is-invalid,
+.was-validated :invalid {
+    border-color: #dc3545;
 }

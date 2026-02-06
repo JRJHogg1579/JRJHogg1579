@@ -183,12 +183,118 @@
     <!-- About me tab -->
     <div id="Contact me" class="tabcontent">
 
-        <h3>Contact me</h3>
 
-        <p> no fuck off </p>
 
-        <p> https://web3forms.com/templates/basic-html-contact-form</p>
+        <!-- <section class="contact-section">
+                <div class="contact-intro">
 
+                    <h3 class="contact-title">Contact me</h3>
+
+                    <p class="contact-description">
+                        Please enter a name, email address and your message:
+                    </p>
+                </div>
+
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="f3345974-a37f-4e61-a88d-c17ab9ab5cbd" />
+                    <input type="hidden" name="from_name" value="jrjh.info" />
+
+                    <!-- More customization options available in the docs: https://docs.web3forms.com
+
+                    <div class="form-group-container">
+
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input id="name" name="subject" class="form-input" placeholder="Name/Company" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" name="email" class="form-input" placeholder="Email address" type="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        </div>
+                    </div>
+                    <button class="form-submit" type="submit">Submit</button>
+                </form>
+
+            </section>
+
+    -->
+
+
+        <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+            <div class="container mx-auto">
+                <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+                    <div class="text-center">
+                        <h2>
+                            Contact me
+                        </h2>
+                        <p>
+                            Please enter your name, email address and message
+                        </p>
+                    </div>
+                    <div class="m-7">
+                        <form action="https://api.web3forms.com/submit"
+                              method="POST"
+                              id="form"
+                              class="needs-validation"
+                              novalidate>
+                            <input type="hidden" name="access_key" value="f3345974-a37f-4e61-a88d-c17ab9ab5cbd" />
+                            <input type="hidden" name="from_name" value="jrjh.info" />
+                            
+                            <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+                            <div class="flex mb-6 space-x-4">
+                                <div class="w-full md:w-1/2">
+                                    <input type="text"
+                                           name="subject"
+                                           id="name"
+                                           placeholder="Name/Company"
+                                           required
+                                           class="textField" />
+                                </div>
+                            </div>
+
+                            <div class="flex mb-6 space-x-4">
+                                <div class="w-full md:w-1/2">
+                                    <input type="email"
+                                           name="email"
+                                           id="email"
+                                           placeholder="Email address"
+                                           required
+                                           class="textField" />
+                                    <div class="empty-feedback text-red-400 text-sm mt-1">
+                                    </div>
+                                    <div class="invalid-feedback text-red-400 text-sm mt-1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <textarea rows="5"
+                                          name="message"
+                                          id="message"
+                                          placeholder="Message"
+                                          class="messageTextField"
+                                          required></textarea>
+                            </div>
+                            <div class="mb-6">
+                                <button type="submit"
+                                        class="submitButton">
+                                    Send Message
+                                </button>
+                            </div>
+                            <p class="text-base text-center text-gray-400" id="result"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -196,6 +302,12 @@
 
     <!-- Javascript -->
     <script>
+
+        // reset the form when returning to the website
+        window.onload = function () {
+            // Reset the form fields when the page loads
+            document.getElementById("form").reset();
+        };
 
         function clearTabs() {
             var i, tabcontent, tablinks;
@@ -283,6 +395,82 @@
             document.getElementById("contactMeTabID").className += " active";
             document.getElementById("Contact me").style.display = "block";
         }
+
+
+
+
+
+
+        (function () {
+            "use strict";
+            /*
+             * Form Validation
+             */
+
+            // Fetch all the forms we want to apply custom validation styles to
+            const forms = document.querySelectorAll(".needs-validation");
+            const result = document.getElementById("result");
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener(
+                    "submit",
+                    function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+
+                            form.querySelectorAll(":invalid")[0].focus();
+                        } else {
+                            /*
+                             * Form Submission using fetch()
+                             */
+                            event.preventDefault();
+                            event.stopPropagation();
+
+                            const formData = new FormData(form);
+                            const object = Object.fromEntries(formData);
+                            const json = JSON.stringify(object);
+                            result.innerHTML = "Please wait...";
+
+                            fetch("https://api.web3forms.com/submit", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                    Accept: "application/json",
+                                },
+                                body: json,
+                            })
+                                .then(async (response) => {
+                                    let json = await response.json();
+                                    if (response.status == 200) {
+                                        result.innerHTML = json.message;
+                                        result.classList.remove("text-gray-500");
+                                        result.classList.add("text-green-500");
+                                    } else {
+                                        console.log(response);
+                                        result.innerHTML = json.message;
+                                        result.classList.remove("text-gray-500");
+                                        result.classList.add("text-red-500");
+                                    }
+                                })
+                                .catch((error) => {
+                                    console.log(error);
+                                    result.innerHTML = "Something went wrong!";
+                                })
+                                .then(function () {
+                                    form.reset();
+                                    form.classList.remove("was-validated");
+                                    setTimeout(() => {
+                                        result.style.display = "none";
+                                    }, 5000);
+                                });
+                        }
+                        form.classList.add("was-validated");
+                    },
+                    false
+                );
+            });
+        })();
     </script>
 
 
