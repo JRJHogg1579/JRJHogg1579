@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
 </head>
 
-<body onload="openProjectTab()">
+<body>
 
 
     <h1> JAMIE HOGG </h1>
@@ -64,7 +64,7 @@
 
         <!-- Project video -->
         <video controls>
-            <source src="artiVideo.mp4" type="video/mp4">
+            <!--<source src="artiVideo.mp4" type="video/mp4">-->
         </video>
 
         <p> Unity multiplayer networking project where players compete in an rts-style game to destroy each other's base using soldiers and artillery </p>
@@ -79,7 +79,7 @@
 
         <!-- Project video -->
         <video controls>
-            <source src="islandVideo.mp4" type="video/mp4">
+            <!---<source src="islandVideo.mp4" type="video/mp4">-->
         </video>
 
         <p> C++ OpenGL project using perlin noise to procedurally generate an island, the island was written to a .obj file for reuse. shader stuf shader stuff cringe </p>
@@ -177,57 +177,15 @@
 
         <h3>About me</h3>
 
-        <p> fuck you </p>
+        <h3>  </h3>
+        <p> My name is Jamie Hogg, and I'm currently an honours student studying Games Development at Glasgow Caledonian University </p>
+        <p>  </p>
+
 
     </div>
 
     <!-- About me tab -->
     <div id="Contact me" class="tabcontent">
-
-
-
-        <!-- <section class="contact-section">
-                <div class="contact-intro">
-
-                    <h3 class="contact-title">Contact me</h3>
-
-                    <p class="contact-description">
-                        Please enter a name, email address and your message:
-                    </p>
-                </div>
-
-                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-
-                    <input type="hidden" name="access_key" value="f3345974-a37f-4e61-a88d-c17ab9ab5cbd" />
-                    <input type="hidden" name="from_name" value="jrjh.info" />
-
-                    <!-- More customization options available in the docs: https://docs.web3forms.com
-
-                    <div class="form-group-container">
-
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input id="name" name="subject" class="form-input" placeholder="Name/Company" type="text" />
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input id="email" name="email" class="form-input" placeholder="Email address" type="email" />
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-textarea" id="message" name="message" placeholder="Message"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                        </div>
-                    </div>
-                    <button class="form-submit" type="submit">Submit</button>
-                </form>
-
-            </section>
-
-    -->
-
 
         <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
             <div class="container mx-auto">
@@ -302,176 +260,8 @@
 
 
     <!-- Javascript -->
-    <script>
+    <script src="index.js">
 
-        // reset the form when returning to the website
-        window.onload = function () {
-            // Reset the form fields when the page loads
-            document.getElementById("form").reset();
-        };
-
-        function clearTabs() {
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("subTabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("subTablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-        }
-
-
-        // Function for project tabs
-        function openSubTab(evt, tab) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("subTabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("subTablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(tab).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-
-        // Function for opening the projects tab and the first project in the tab
-        function openProjectTab() {
-
-            clearTabs()
-
-            // Open the projects tab
-            document.getElementById("projectTabID").className += " active";
-            document.getElementById("Projects").style.display = "block";
-
-            // Open the project 1 tab
-            document.getElementById("project1TabID").className += " active";
-            document.getElementById("p1").style.display = "block";
-
-        }
-
-        // Function for opening the about me tab
-        function openAboutMeTab() {
-
-            clearTabs();
-
-            // Open the about me tab
-            document.getElementById("aboutMeTabID").className += " active";
-            document.getElementById("About me").style.display = "block";
-
-        }
-
-        function openContactMeTab() {
-
-            clearTabs();
-
-            // Open the contact me tab
-            document.getElementById("contactMeTabID").className += " active";
-            document.getElementById("Contact me").style.display = "block";
-        }
-
-
-
-
-
-
-        (function () {
-            "use strict";
-            /*
-             * Form Validation
-             */
-
-            // Fetch all the forms we want to apply custom validation styles to
-            const forms = document.querySelectorAll(".needs-validation");
-            const result = document.getElementById("result");
-            // Loop over them and prevent submission
-            Array.prototype.slice.call(forms).forEach(function (form) {
-                form.addEventListener(
-                    "submit",
-                    function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault();
-                            event.stopPropagation();
-
-                            form.querySelectorAll(":invalid")[0].focus();
-                        } else {
-                            /*
-                             * Form Submission using fetch()
-                             */
-                            event.preventDefault();
-                            event.stopPropagation();
-
-                            const formData = new FormData(form);
-                            const object = Object.fromEntries(formData);
-                            const json = JSON.stringify(object);
-                            result.innerHTML = "Please wait...";
-
-                            fetch("https://api.web3forms.com/submit", {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    Accept: "application/json",
-                                },
-                                body: json,
-                            })
-                                .then(async (response) => {
-                                    let json = await response.json();
-                                    if (response.status == 200) {
-                                        result.innerHTML = json.message;
-                                        result.classList.remove("text-gray-500");
-                                        result.classList.add("text-green-500");
-                                    } else {
-                                        console.log(response);
-                                        result.innerHTML = json.message;
-                                        result.classList.remove("text-gray-500");
-                                        result.classList.add("text-red-500");
-                                    }
-                                })
-                                .catch((error) => {
-                                    console.log(error);
-                                    result.innerHTML = "Something went wrong!";
-                                })
-                                .then(function () {
-                                    form.reset();
-                                    form.classList.remove("was-validated");
-                                    setTimeout(() => {
-                                        result.style.display = "none";
-                                    }, 5000);
-                                });
-                        }
-                        form.classList.add("was-validated");
-                    },
-                    false
-                );
-            });
-        })();
     </script>
 
 
