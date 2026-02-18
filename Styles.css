@@ -14,11 +14,15 @@
     padding: 10px;
 }
 
-body 
-{
+body {
     font-family: "Share Tech", sans-serif;
     text-align: center;
-    background-color: #1c261a;
+   /* background-color: #1c261a;*/
+
+    background-image: url("sideBanner.jpg");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 h1 
