@@ -10,261 +10,265 @@
 
 <body>
 
-    <div class=back>
 
-        img src="back.jpg"
+        <div class="overlay">
 
-    </div>
+            <h1> JAMIE HOGG </h1>
+            <h3> BSC GAMES DEVELOPMENT, GLASGOW CALEDONIAN UNIVERSITY </h3>
 
+            <!-- Main website tabs -->
+            <div class="tab">
+                <button id="projectTabID" class="tablinks" onclick="openProjectTab()">PROJECTS</button>
+                <button id="aboutMeTabID" class="tablinks" onclick="openAboutMeTab()">ABOUT ME</button>
+                <button id="contactMeTabID" class="tablinks" onclick="openContactMeTab()">CONTACT ME</button>
+            </div>
 
-    <h1> JAMIE HOGG </h1>
-    <h3> BSC GAMES DEVELOPMENT, GLASGOW CALEDONIAN UNIVERSITY </h3>
+            <!-- Project tabs -->
+            <div id="Projects" class="tabcontent">
 
-    <!-- Main website tabs -->
-    <div class="tab">
-        <button id="projectTabID" class="tablinks" onclick="openProjectTab()">PROJECTS</button>
-        <button id="aboutMeTabID" class="tablinks" onclick="openAboutMeTab()">ABOUT ME</button>
-        <button id="contactMeTabID" class="tablinks" onclick="openContactMeTab()">CONTACT ME</button>
-    </div>
+                <h3>PROJECTS</h3>
 
-    <!-- Project tabs -->
-    <div id="Projects" class="tabcontent">
+                <div class="subTab">
+                    <button id="project1TabID" class="subTablinks" onclick="openSubTab(event, 'p1')">PROJECT BALL EXPLODER</button>
+                    <button class="subTablinks" onclick="openSubTab(event, 'p2')">PROJECT ARTI</button>
+                    <button class="subTablinks" onclick="openSubTab(event, 'p3')">PROJECT ISLAND</button>
+                    <button class="subTablinks" onclick="openSubTab(event, 'p4')">VR RESCUE</button>
+                    <button class="subTablinks" onclick="openSubTab(event, 'p5')">PROJECT FLANK</button>
+                    <button class="subTablinks" onclick="openSubTab(event, 'p6')">CMD SPACE INVADERS/SNAKE</button>
+                    <button class="subTablinks" onclick="openSubTab(event, 'p7')">PROJECT DRIFT</button>
+                    <button class="subTablinks" onclick="openSubTab(event, 'p8')">MANDELBROT CPU PARALLELISATION</button>
+                    <button class="subTablinks" onclick="openSubTab(event, 'p9')">PROJECT QUEST</button>
+                </div>
 
-        <h3>PROJECTS</h3>
+            </div>
 
-        <div class="subTab">
-            <button id="project1TabID" class="subTablinks" onclick="openSubTab(event, 'p1')">PROJECT BALL EXPLODER</button>
-            <button class="subTablinks" onclick="openSubTab(event, 'p2')">PROJECT ARTI</button>
-            <button class="subTablinks" onclick="openSubTab(event, 'p3')">PROJECT ISLAND</button>
-            <button class="subTablinks" onclick="openSubTab(event, 'p4')">VR RESCUE</button>
-            <button class="subTablinks" onclick="openSubTab(event, 'p5')">PROJECT FLANK</button>
-            <button class="subTablinks" onclick="openSubTab(event, 'p6')">CMD SPACE INVADERS/SNAKE</button>
-            <button class="subTablinks" onclick="openSubTab(event, 'p7')">PROJECT DRIFT</button>
-            <button class="subTablinks" onclick="openSubTab(event, 'p8')">MANDELBROT CPU PARALLELISATION</button>
-            <button class="subTablinks" onclick="openSubTab(event, 'p9')">PROJECT QUEST</button>
-        </div>
+            <!-- Project Island subtab -->
+            <div id="p1" class="subTabcontent">
 
-    </div>
+                <!-- Project title -->
+                <h3>PROJECT BALL EXPLODER</h3>
 
-    <!-- Project Island subtab -->
-    <div id="p1" class="subTabcontent">
+                <!-- Project video -->
+                <video controls>
+                    <source src="ballExploderVideo.mp4" type="video/mp4">
+                </video>
 
-        <!-- Project title -->
-        <h3>PROJECT BALL EXPLODER</h3>
+                <p> C++ OpenGL project using a geometry shader to create an explosion effect as well as framebuffer operations to create an inverted colour reticle shader and depth testing for shadowmapping</p>
 
-        <!-- Project video -->
-        <video controls>
-            <source src="ballExploderVideo.mp4" type="video/mp4">
-        </video>
+            </div>
 
-        <p> C++ OpenGL project using a geometry shader to create an explosion effect as well as framebuffer operations to create an inverted colour reticle shader and depth testing for shadowmapping</p>
+            <!-- Project 2 subtab -->
+            <div id="p2" class="subTabcontent">
 
-    </div>
 
-    <!-- Project 2 subtab -->
-    <div id="p2" class="subTabcontent">
+                <!-- Project title -->
+                <h3>PROJECT ARTI</h3>
 
+                <!-- Project video -->
+                <video controls>
+                    <!--<source src="artiVideo.mp4" type="video/mp4">-->
+                </video>
 
-        <!-- Project title -->
-        <h3>PROJECT ARTI</h3>
+                <p> Unity multiplayer networking project where players compete in an rts-style game to destroy each other's base using soldiers and artillery </p>
 
-        <!-- Project video -->
-        <video controls>
-            <!--<source src="artiVideo.mp4" type="video/mp4">-->
-        </video>
+            </div>
 
-        <p> Unity multiplayer networking project where players compete in an rts-style game to destroy each other's base using soldiers and artillery </p>
+            <!-- Project 3 subtab -->
+            <div id="p3" class="subTabcontent">
 
-    </div>
+                <!-- Project title -->
+                <h3>PROJECT ISLAND</h3>
 
-    <!-- Project 3 subtab -->
-    <div id="p3" class="subTabcontent">
+                <!-- Project video -->
+                <video controls>
+                    <!---<source src="islandVideo.mp4" type="video/mp4">-->
+                </video>
 
-        <!-- Project title -->
-        <h3>PROJECT ISLAND</h3>
+                <p> C++ OpenGL project using perlin noise to procedurally generate an island, the island was written to a .obj file for reuse. shader stuf shader stuff cringe </p>
 
-        <!-- Project video -->
-        <video controls>
-            <!---<source src="islandVideo.mp4" type="video/mp4">-->
-        </video>
+            </div>
 
-        <p> C++ OpenGL project using perlin noise to procedurally generate an island, the island was written to a .obj file for reuse. shader stuf shader stuff cringe </p>
+            <!-- Project 4 subtab -->
+            <div id="p4" class="subTabcontent">
 
-    </div>
+                <!-- Project title -->
+                <h3>VR RESCUE GROUP PROJECT</h3>
 
-    <!-- Project 4 subtab -->
-    <div id="p4" class="subTabcontent">
+                <!-- Project video -->
+                <video controls>
+                    <source src="VRRescue.mp4" type="video/mp4">
+                </video>
 
-        <!-- Project title -->
-        <h3>VR RESCUE GROUP PROJECT</h3>
+                <p> Unreal engine 5 vr project with the objective of training engineers about the rescue procedure after an incident in a wind turbine</p>
 
-        <!-- Project video -->
-        <video controls>
-            <source src="VRRescue.mp4" type="video/mp4">
-        </video>
+            </div>
 
-        <p> Unreal engine 5 vr project with the objective of training engineers about the rescue procedure after an incident in a wind turbine</p>
+            <!-- Project 5 subtab -->
+            <div id="p5" class="subTabcontent">
 
-    </div>
+                <!-- Project title -->
+                <h3>PROJECT FLANK</h3>
 
-    <!-- Project 5 subtab -->
-    <div id="p5" class="subTabcontent">
+                <!-- Project video -->
+                <p> video file too big </p>
 
-        <!-- Project title -->
-        <h3>PROJECT FLANK</h3>
+                <p> C++ console based space invaders and snake game </p>
 
-        <!-- Project video -->
-        <p> video file too big </p>
+            </div>
 
-        <p> C++ console based space invaders and snake game </p>
+            <!-- Project 6 subtab -->
+            <div id="p6" class="subTabcontent">
 
-    </div>
+                <!-- Project title -->
+                <h3>SPACE INVADERS/SNAKE</h3>
 
-    <!-- Project 6 subtab -->
-    <div id="p6" class="subTabcontent">
+                <!-- Project video -->
+                <video controls>
+                    <source src="spaceInvadersSnake.mp4" type="video/mp4">
+                </video>
 
-        <!-- Project title -->
-        <h3>SPACE INVADERS/SNAKE</h3>
+                <p> Unity based agent AI project using behaviour tree based decision making to create attack plans for rts-style agents </p>
 
-        <!-- Project video -->
-        <video controls>
-            <source src="spaceInvadersSnake.mp4" type="video/mp4">
-        </video>
+            </div>
 
-        <p> Unity based agent AI project using behaviour tree based decision making to create attack plans for rts-style agents </p>
+            <!-- Project 7 subtab -->
+            <div id="p7" class="subTabcontent">
 
-    </div>
+                <!-- Project title -->
+                <h3>PROJECT DRIFT</h3>
 
-    <!-- Project 7 subtab -->
-    <div id="p7" class="subTabcontent">
+                <!-- Project video -->
+                <video controls>
+                    <source src="ProjectDriftVideo.mp4" type="video/mp4">
+                </video>
 
-        <!-- Project title -->
-        <h3>PROJECT DRIFT</h3>
+                <p> C++ OpenGL project designed for use on the PSVita. The player drifts the car around a track while avoiding obstacles and collecting checkpoints in order to achieve the best time </p>
 
-        <!-- Project video -->
-        <video controls>
-            <source src="ProjectDriftVideo.mp4" type="video/mp4">
-        </video>
+            </div>
 
-        <p> C++ OpenGL project designed for use on the PSVita. The player drifts the car around a track while avoiding obstacles and collecting checkpoints in order to achieve the best time </p>
+            <!-- Project 8 subtab -->
+            <div id="p8" class="subTabcontent">
 
-    </div>
+                <!-- Project title -->
+                <h3>MANDELBROT RENDERING WITH CPU PARALLELISATION</h3>
 
-    <!-- Project 8 subtab -->
-    <div id="p8" class="subTabcontent">
+                <!-- Project video -->
+                <p> video of mandelbrot </p>
 
-        <!-- Project title -->
-        <h3>MANDELBROT RENDERING WITH CPU PARALLELISATION</h3>
+                <p> This project was a mandelbrot set being computed using a task farm to divide and parallelise across the cpu </p>
 
-        <!-- Project video -->
-        <p> video of mandelbrot </p>
+            </div>
 
-        <p> This project was a mandelbrot set being computed using a task farm to divide and parallelise across the cpu </p>
+            <!-- Project 9 subtab -->
+            <div id="p8" class="subTabcontent">
 
-    </div>
+                <!-- Project title -->
+                <h3>PROJECT QUEST</h3>
 
-    <!-- Project 9 subtab -->
-    <div id="p8" class="subTabcontent">
+                <!-- Project video -->
+                <p> video of pq </p>
 
-        <!-- Project title -->
-        <h3>PROJECT QUEST</h3>
+                <p> C++ SFML based rpg game where the player completes a quest to slay an ogre </p>
 
-        <!-- Project video -->
-        <p> video of pq </p>
+            </div>
 
-        <p> C++ SFML based rpg game where the player completes a quest to slay an ogre </p>
 
-    </div>
 
 
 
+            <!-- About me tab -->
+            <div id="About me" class="tabcontent">
 
+                <h3>About me:</h3>
 
-    <!-- About me tab -->
-    <div id="About me" class="tabcontent">
+                <p> I'm currently an honours student studying Games Development at Glasgow Caledonian University. </p>
+                <p> I have experience broadly in all aspects of game development, with a focus on systems development. </p>
+                <p> My programming experiences comes mainly from making projects in C++, using OpenGL and SFML to create 2D and 3D envvironments. </p>
+                <p> I have experience in C#, Python, Java, Visual Basic, and HTML. </p>
+                <p> With respect to game engines, I have also completed projects in the Unity Engine and Unreal Engine 5. </p>
 
-        <h3>About me:</h3>
 
-        <p> I'm currently an honours student studying Games Development at Glasgow Caledonian University. </p>
-        <p> I have experience broadly in all aspects of game development, with a focus on systems development. </p>
-        <p> My programming experiences comes mainly from making projects in C++, using OpenGL and SFML to create 2D and 3D envvironments. </p>
-        <p> I have experience in C#, Python, Java, Visual Basic, and HTML. </p>
-        <p> With respect to game engines, I have also completed projects in the Unity Engine and Unreal Engine 5. </p>
+            </div>
 
+            <!-- About me tab -->
+            <div id="Contact me" class="tabcontent">
 
-    </div>
-
-    <!-- About me tab -->
-    <div id="Contact me" class="tabcontent">
-
-        <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
-            <div class="container mx-auto">
-                <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-                    <div class="text-center">
-                        <h2>
-                            Contact me
-                        </h2>
-                        <p>
-                            Please enter your name, email address and message
-                        </p>
-                    </div>
-                    <div class="m-7">
-                        <form action="https://api.web3forms.com/submit"
-                              method="POST"
-                              id="form"
-                              class="needs-validation"
-                              novalidate>
-                            <input type="hidden" name="access_key" value="f3345974-a37f-4e61-a88d-c17ab9ab5cbd" />
-                            <input type="hidden" name="from_name" value="jrjh.info" />
-
-                            <input type="checkbox" name="botcheck" id="" style="display: none;" />
-
-                            <div class="flex mb-6 space-x-4">
-                                <div class="w-full md:w-1/2">
-                                    <input type="text"
-                                           name="subject"
-                                           id="name"
-                                           placeholder="Name/Company"
-                                           required
-                                           class="textField" />
-                                </div>
+                <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+                    <div class="container mx-auto">
+                        <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+                            <div class="text-center">
+                                <h2>
+                                    Contact me
+                                </h2>
+                                <p>
+                                    Please enter your name, email address and message
+                                </p>
                             </div>
+                            <div class="m-7">
+                                <form action="https://api.web3forms.com/submit"
+                                      method="POST"
+                                      id="form"
+                                      class="needs-validation"
+                                      novalidate>
+                                    <input type="hidden" name="access_key" value="f3345974-a37f-4e61-a88d-c17ab9ab5cbd" />
+                                    <input type="hidden" name="from_name" value="jrjh.info" />
 
-                            <div class="flex mb-6 space-x-4">
-                                <div class="w-full md:w-1/2">
-                                    <input type="email"
-                                           name="email"
-                                           id="email"
-                                           placeholder="Email address"
-                                           required
-                                           class="textField" />
-                                    <div class="empty-feedback text-red-400 text-sm mt-1">
+                                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+                                    <div class="flex mb-6 space-x-4">
+                                        <div class="w-full md:w-1/2">
+                                            <input type="text"
+                                                   name="subject"
+                                                   id="name"
+                                                   placeholder="Name/Company"
+                                                   required
+                                                   class="textField" />
+                                        </div>
                                     </div>
-                                    <div class="invalid-feedback text-red-400 text-sm mt-1">
+
+                                    <div class="flex mb-6 space-x-4">
+                                        <div class="w-full md:w-1/2">
+                                            <input type="email"
+                                                   name="email"
+                                                   id="email"
+                                                   placeholder="Email address"
+                                                   required
+                                                   class="textField" />
+                                            <div class="empty-feedback text-red-400 text-sm mt-1">
+                                            </div>
+                                            <div class="invalid-feedback text-red-400 text-sm mt-1">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="mb-6">
+                                        <textarea rows="5"
+                                                  name="message"
+                                                  id="message"
+                                                  placeholder="Message"
+                                                  class="messageTextField"
+                                                  required></textarea>
+                                    </div>
+                                    <div class="mb-6">
+                                        <button type="submit"
+                                                class="submitButton">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                    <p class="text-base text-center text-gray-400" id="result"></p>
+                                </form>
                             </div>
-                            <div class="mb-6">
-                                <textarea rows="5"
-                                          name="message"
-                                          id="message"
-                                          placeholder="Message"
-                                          class="messageTextField"
-                                          required></textarea>
-                            </div>
-                            <div class="mb-6">
-                                <button type="submit"
-                                        class="submitButton">
-                                    Send Message
-                                </button>
-                            </div>
-                            <p class="text-base text-center text-gray-400" id="result"></p>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
-    </div>
+
+
+
+
+    
 
 
 
