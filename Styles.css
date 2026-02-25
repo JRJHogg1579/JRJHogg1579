@@ -147,6 +147,7 @@ p
 
 /* contact me form stuff */
 .textField {
+    font-family: "Share Tech", sans-serif;
     height: 36px;
     width: 33.333%;
     overflow: hidden;
@@ -159,6 +160,7 @@ p
 }
 
 .messageTextField {
+    font-family: "Share Tech", sans-serif;
     height: 36px;
     width: 33.333%;
     overflow: hidden;
