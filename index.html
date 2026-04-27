@@ -29,6 +29,8 @@
                 <h3>PROJECTS</h3>
 
                 <div class="subTab">
+                    <button id="project1TabID" class="subTablinks" onclick="openSubTab(event, 'p-1')">PROJECT SAILING</button>
+                    <button id="project1TabID" class="subTablinks" onclick="openSubTab(event, 'p0')">HONOURS PROJECT</button>
                     <button id="project1TabID" class="subTablinks" onclick="openSubTab(event, 'p1')">PROJECT BALL EXPLODER</button>
                     <button class="subTablinks" onclick="openSubTab(event, 'p2')">PROJECT ARTI</button>
                     <button class="subTablinks" onclick="openSubTab(event, 'p3')">PROJECT ISLAND</button>
@@ -42,7 +44,89 @@
 
             </div>
 
-            <!-- Project Island subtab -->
+            <!-- Project 0 subtab -->
+            <div id="p-1" class="subTabcontent">
+
+                <!-- Project title -->
+                <h3>PROJECT SAILING</h3>
+
+                <!-- Project video -->
+                <video controls>
+                    <source src="ProjectSailing.mp4" type="video/mp4">
+                </video>
+
+                <p> Sailing and fishing game prototype made in C++ and OpenGL</p>
+                <p> This is a game prototype where the player can sail a boat around and fish in the sea.</p>
+                <p> The boat moves with realistic sailing physics using a coefficient of drag based on the wind direction.</p>
+                <p>
+                    The waves on the sea were created by manipulation vertexes of a flat plane in three directions,
+                    generating normals for the new manipulated vertexes and colouring it depending on their direction
+                    relative to the sun.
+                </p>
+                <p> The island from project Island has been imported for the player to sail around. </p>
+                <p> The player can equip their rod in the boat, cast out and reel in fish in order to gain score. </p>
+                <p>
+                    The game features a custom loading system that has been vastly improved from project ball exploder.
+                    The new system uses custom structs of vectors in order to create a load order for resources, and sequentially
+                    aquire them from storage. This allows for a smooth responsive loading screen.
+                </p>
+                <p>
+                    All models in the game were custom made by me, although not very good, I have improved somewhat over the
+                    course of the project.
+                </p>
+                <p>
+                    The game also features a custom SOA and AOS game object system that allows for catogorisation of objects
+                    into data oriented structures or object oriented structures. These are passed through a system of managers
+                    that automatically manage their rendering and runtime operations.
+                </p>
+                <p>
+                    A custom text renderer was created that reads in a custom font file, and modifies the uv coordinates of
+                    a rendered mesh to fit the assigned char of the text that is passed to it, and can be updated in real time
+                    . These are used for UI rendering in the game.
+                </p>
+
+                <a href="https://jrhogg1579.itch.io/project-sailing">A playable build is avaliable on Itch.io</a>
+
+
+
+            </div> 
+    
+    
+            <!-- Project 0 subtab -->
+            <div id="p0" class="subTabcontent">
+
+                <!-- Project title -->
+                <h3>HONOURS PROJECT</h3>
+
+                <!-- Project video -->
+                <video controls>
+                    <source src="Honours 0.mp4" type="video/mp4">
+                </video>
+
+                <p> Mesh deformation simulation project made in C++ and OpenGL</p>
+                <p> For my honours project I am simulation mesh deformation in realtime, using both the CPU and GPU. </p>
+                <p>
+                    Meshes are split up into many nodes representing one or many vertexes, and the nodes actively rewrite
+                    the vertex buffer of the mesh in response to collisions, and other connected nodes.
+                </p>
+                <p>
+                    I am currently in the process of writing this into a compute shader for GPU acceleration of the
+                    simulation.
+                </p>
+
+                <!-- Project video -->
+                <video controls>
+                    <source src="Honours 1.mp4" type="video/mp4">
+                </video>
+                <!-- Project video -->
+                <video controls>
+                    <source src="Honours 2.mp4" type="video/mp4">
+                </video>
+
+
+            </div>
+
+             <!-- Project 1 subtab -->
             <div id="p1" class="subTabcontent">
 
                 <!-- Project title -->
@@ -50,11 +134,24 @@
 
                 <!-- Project video -->
                 <video controls>
-                    <source src="ballExploderVideo.mp4" type="video/mp4">
+                    <source src="BallExploder.mp4" type="video/mp4">
                 </video>
 
-                <p> C++ OpenGL project using a geometry shader to create an explosion effect as well as framebuffer operations to create an inverted colour reticle shader and depth testing for shadowmapping</p>
+                <p> C++ OpenGL prototype game where the player has to destroy bowling balls before they hit the pin in the middle. </p>
 
+                 <p>This was my first experience using geometry shaders in GLSL to create the explosion effect when the balls are hit, 
+                        as well as my first time using the depth buffer for shadowmapping the bowling pin. </p>
+
+                     <p> Other shaders of note are the reflection, crosshair and fire effect shaders. The reflection shader 
+                     samples the skybox and mixes the texture at the sample point with the object texture. For the crosshair
+                shader, the screen is rendered to a framebuffer, and then the crosshair texture acts as a chromakey where 
+                overlapping textures are inverted and drawn above the scene. The fire effect is created by sampling three
+                perlin noise textures, mixing them, moving uv cooridnates over them, and finally bending them into a circle 
+                to create the effect.</p>
+
+                <p> This project was also my first attempt to abstract resource loading away from the main state of the game.</p>
+                <p> While functional my loading state was based on arrays of resource types, and lacked the scalability and 
+                    reusability required in later projects.</p>
             </div>
 
             <!-- Project 2 subtab -->
@@ -66,10 +163,15 @@
 
                 <!-- Project video -->
                 <video controls>
-                    <!--<source src="artiVideo.mp4" type="video/mp4">-->
+                    <source src="ProjectArti.mp4" type="video/mp4"> 
                 </video>
 
-                <p> Unity multiplayer networking project where players compete in an rts-style game to destroy each other's base using soldiers and artillery </p>
+                <p> Unity multiplayer networking project where players compete in an rts-style game to destroy each other's base. </p>
+                <p> This project was made for my networking module at GCU. The player spawns, moves, and gives orders to units on a map
+                    in order to set up ambushes and artillery barrages on other player's units and base.</p>
+                <p> The game dynamically reads in the terrain type of the map texture and adjusts the player speed according to it.</p>
+                <p> It featured catchup systems to move player's out of synch units in order to catch them up.</p>
+
 
             </div>
 
@@ -81,10 +183,22 @@
 
                 <!-- Project video -->
                 <video controls>
-                    <!---<source src="islandVideo.mp4" type="video/mp4">-->
+                    <source src="ProjectIsland.mp4" type="video/mp4" />
                 </video>
 
-                <p> C++ OpenGL project using perlin noise to procedurally generate an island, the island was written to a .obj file for reuse. shader stuf shader stuff cringe </p>
+                <p> C++ OpenGL project using perlin noise to procedurally generate an island.</p>
+
+                <p> The player can climb the island and swim in the generated water. </p>
+                <p> The island was generated using perlin noise textures to create a heightmap, and then from that heightmap creating a normalmap.</p>
+                <p> The island is them written to a .obj file for reuse and faster load times into the project.</p>
+                <p> The normal map is used for dynamic lighting during the day night cycle, texture swapping between rock and grass and for player movement. The player's
+                    velocity is modified by the xz component of the island normals at a certain steepness, and this causes the player to slide
+                    down steep edges. </p>
+                <p> The water is created using a sin wave with the magnitude being determined by a counter as well as the distance from the island,
+                    this causes the waves to roll in and out from the island. The transparency, colour and height of the waves are then modified by
+                    their distance to the island. </p>
+                <p> This was my first attempt at using reflection shaders, where the sun is reflected off of the water surface into the player's vision.</p>
+                <p> Vertex manipulation was also used to make the trees sway in the wind depending on the wind direction and the vertex position of the vertex. </p>
 
             </div>
 
@@ -99,7 +213,19 @@
                     <source src="VRRescue.mp4" type="video/mp4">
                 </video>
 
-                <p> Unreal engine 5 vr project with the objective of training engineers about the rescue procedure after an incident in a wind turbine</p>
+                <p> I collaberated with a team to make VR Rescue for my Group Project Module at GCU</p>
+                <p> It was created in Unreal Engine 5, made as a VR saftey procedure instructional tool for wind turbine engineers.</p>
+                <p> The player transits up to the top of the wind turbine in order to safely lower an injured person down to be resuced, 
+                    and this project outlines the procedure of the equipment, ascention, checking status, and lowering the person.</p>
+                <p> During devlopment I worked on and took over a number of responsibilities, including:</p>
+                <p> The harness equimpent and inventory system</p>
+                <p> Headset tracking on equipment</p>
+                <p> Object interation and functionality </p>
+                <p> Player collision</p>
+                <p> Adding SFX</p>
+                <p> Rope rigging, physics and mechanics</p>
+                <p> Climbing physics and mechanics</p>
+                <p> Team coodination and planning </p>
 
             </div>
 
@@ -110,9 +236,19 @@
                 <h3>PROJECT FLANK</h3>
 
                 <!-- Project video -->
-                <p> video file too big </p>
-
-                <p> C++ console based space invaders and snake game </p>
+                <video controls>
+                    <source src="ProjectFlank.mp4" type="video/mp4">
+                </video>
+                <p> Unity based project made for my Game AI module at GCU. </p>
+                <p> In this module we were tasked with making a team of AI agents play an RTS style game against another set of agents created by the lecturer.  </p>
+                <p> For this I created an inheritance chain of agents of different types; Scouts, Navigators, and Soldiers.
+                    The scouts uncover the fog of war, find enemies and mark them for the navigators. The navigators then use A*
+                    to create paths just outside of the enemy aggression range, and lead the soldiers there.
+                    once all units have reached their destination, an attack order is created, one of; Rushing the enemy, 
+                    Skirmishing from a distance or initiation a pincer maneuver to attack from two different directions.</p>
+                <p> The AI decision making process is all based upon a behavior tree I created to command the units. It assesses the current 
+                    strength of the enemies compared to the allied units before assigning the attack order. </p>
+                <p> When special units die they are dynamically replaced by soldier units to fill out their role for them. </p>
 
             </div>
 
@@ -127,7 +263,13 @@
                     <source src="spaceInvadersSnake.mp4" type="video/mp4">
                 </video>
 
-                <p> Unity based agent AI project using behaviour tree based decision making to create attack plans for rts-style agents </p>
+                <p> C++ Unicode based recreation of Space Invaders and Snake </p>
+                <p> The game was set up to render to the CMD window, where the player can select between playing space invaders or
+                snake </p>
+                <p> The project includes score save/loading, and a state machine that allows the player to transition between menus and
+                    games.</p> 
+                <p> The art in the project is created using unicode chars in a w_char format, those chars are saved in a double pointer 
+                    array and then rendered to the window. </p>
 
             </div>
 
@@ -142,7 +284,12 @@
                     <source src="ProjectDriftVideo.mp4" type="video/mp4">
                 </video>
 
-                <p> C++ OpenGL project designed for use on the PSVita. The player drifts the car around a track while avoiding obstacles and collecting checkpoints in order to achieve the best time </p>
+                <p> C++ OpenGL racing game designed for use on the PSVita. </p>
+                <p> The player drifts the car around a track while avoiding obstacles and collecting checkpoints 
+                    in order to achieve the best time </p>
+                <p> The project was created in a propriatery engine called GEF, using BOX2D for physics. </p>
+                <p> It was designed to be played on the PSVita, . </p>
+                <p> The project was created in a proprietary framework called GEF, using BOX2D for physics. </p>
 
             </div>
 
@@ -153,24 +300,39 @@
                 <h3>MANDELBROT RENDERING WITH CPU PARALLELISATION</h3>
 
                 <!-- Project video -->
-                <p> video of mandelbrot </p>
+                <p> Cannot for the life of me find the code files for this </p>
 
-                <p> This project was a mandelbrot set being computed using a task farm to divide and parallelise across the cpu </p>
+                <p> This project was a mandelbrot set being computed using a task farm to divide and parallelise across cpu cores</p>
 
             </div>
 
             <!-- Project 9 subtab -->
-            <div id="p8" class="subTabcontent">
+            <div id="p9" class="subTabcontent">
 
                 <!-- Project title -->
                 <h3>PROJECT QUEST</h3>
 
                 <!-- Project video -->
-                <p> video of pq </p>
+                <video controls>
+                    <source src="ProjectQuest.mp4" type="video/mp4">
+                </video>
 
-                <p> C++ SFML based rpg game where the player completes a quest to slay an ogre </p>
+                <p> C++ SFML based rpg game where the player completes a quest to slay an ogre. </p>
+                <p> This was my first fully playable project that I created. </p>
+                <p>
+                    The player moves from a safe area, through a field to collect a quest in the town to slay a monster.
+                    there are multiple interactable npc's such as vendors, guards and the mayor.
+                </p>
+                <p>
+                    The game uses a turn based pokemon style combat system when fighting enemies. The player has different
+                    options such as to attack, use a potion and flee.
+                </p>
+                <p>
+                    The player can level up and improve their health and damage by defeating enemies, or purchasing upgrades
+                    from vendors in town.
+                </p>
 
-            </div>
+            </div>  
 
 
 
@@ -183,9 +345,11 @@
 
                 <p> I'm currently an honours student studying Games Development at Glasgow Caledonian University. </p>
                 <p> I have experience broadly in all aspects of game development, with a focus on systems development. </p>
-                <p> My programming experiences comes mainly from making projects in C++, using OpenGL and SFML to create 2D and 3D envvironments. </p>
-                <p> I have experience in C#, Python, Java, Visual Basic, and HTML. </p>
-                <p> With respect to game engines, I have also completed projects in the Unity Engine and Unreal Engine 5. </p>
+                <p> My programming experience is mainly from projects in C++, using OpenGL and SFML to create 2D and 3D envvironments. </p>
+                <p> I also have some experience in C#, Python, Java, Visual Basic, and HTML. </p>
+                <p> I would describe myself as a backend programmer, preferring to work on game systems and functionality, 
+                    however I have experience in graphics programming as well, and don't feel that I'm lacking in any specific
+                    aras.</p>
 
 
             </div>

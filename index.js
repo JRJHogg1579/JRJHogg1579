@@ -68,7 +68,7 @@ function openProjectTab() {
 
     // Open the project 1 tab
     document.getElementById("project1TabID").className += " active";
-    document.getElementById("p1").style.display = "block";
+    document.getElementById("p-1").style.display = "block";
 
 }
 
